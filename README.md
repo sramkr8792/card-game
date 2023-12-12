@@ -1,33 +1,20 @@
-# Dropyacht's Principal Frontend Assessment
+Card Flip Game
 
-## Description
+Your task is to develop a memory game featuring emoji cards. The game will consist of 16 cards, each adorned with an emoji. There are 8 unique emojis, with each emoji appearing on two cards. The primary goal is to find matching pairs of emojis.
 
-Your goal is to create a dashboard using ReactJS which shows Total Clicks and Impressions along with a functional line chart and gets updated based on the date range selected by the user. The data is provided in the `src/data/data.js` file or you can download the CSV [Here](https://raw.githubusercontent.com/sundi133/dy-pub-apis.github.io/main/test_data-ic.csv). Here's a screenshot of the dashboard you'll be building:
+Gameplay Mechanics:
 
-![Dashboard](./public/requirements.png)
+        Initial Setup:
+There are 16 cards in total.
+Each card has an emoji on it, with 8 unique emojis used in total.
+Each emoji appears on exactly two cards.
+The cards are placed in a random order on the screen, emoji side hidden.
 
-#### Requirements
+Interaction:
+Clicking a card flips it over, revealing the emoji.
+The player then selects a second card to flip.
+If the emojis on both cards match, both cards are removed from the game.
+If the emojis do not match, both cards are flipped back over, hiding the emojis.
 
-- Total Clicks and Impressions to be calculated and updated whenever a valid date range is selected.
-- The line graph should be updated with the correct values whenever a valid date range is selected.
-- Left Navigation should be designed and it is OK for the links to be static.
-
-**NOTE: We run plagarism checks off common open source libraries, and you will fail the test if you copy code.**
-
-## Instructions
-
-#### Setup
-
-The project is bootstraped using create-react-app. Running `npm install` and `npm start` should start the dev version of the web-app. We have `typescript` already installed, so that can be leveraged during development. `src/App/components/Dashboard.tsx` will be a nice starting point to create layout for the dashboard but feel free to change the structure as you see fit.
-
-#### Rules and tips
-
-- You're allowed and encouraged to install helper libraries that can help you design things better. Feel free to add CSS styling to make the game visually appealing, we'd recommend using [TailwindCSS](https://tailwindcss.com/).
-- Any type of React components are acceptable, but we'd prefer you use functional components with hooks.
-- You're allowed to use the file structure of your choice, but we'll be looking for candidates to design clean and modular code
-- You're allowed to use a state management tool of any kind, and persistence is not required.
-- You're allowed to use any charting library of your choice, apexcharts, chartjs or others
-- Add comments wherever necessary, and keep function names relevant for the reviewer to have a better understanding of how things work.
-- If possible, update the README with a few thoughts on your approach and anything else you want your reviewer to know when reviewing your code.
-
-Remember, this is an opportunity to showcase your skills and problem-solving abilities. We're looking for a principal level engineer who can turn an open-ended problem into an elegant solution. Good luck, and we look forward to seeing your implementation!
+End Condition:
+           The game is completed when all pairs of matching cards have been removed.
